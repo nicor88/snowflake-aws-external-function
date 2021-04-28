@@ -1,9 +1,13 @@
+import base64
+import datetime
 import json
 import hashlib
-import base64
+
 
 def process_item(item):
-    return {"input": item}
+    return {"source_item": item,
+            "extra": "this was added by the function",
+            "timestamp": str(datetime.datetime.utcnow())}
 
 def process_data(data):
     processed_data = []
