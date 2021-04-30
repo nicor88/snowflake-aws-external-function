@@ -2,7 +2,7 @@
 Boilerplate repo to deploy a Lambda function to be used as External function in Snowflake.
 
 ## Requirements
-* terraform >=
+* terraform >= 0.14
 * AWS account
 * Snowflake account IAM user
 
