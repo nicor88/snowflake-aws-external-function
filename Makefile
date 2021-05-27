@@ -1,3 +1,5 @@
+ACCOUNT ?=
+
 infra-init:
 	cd infra && terraform init;
 
@@ -14,4 +16,4 @@ infra-apply: infra-plan
 	cd infra && awsudo -u ${ACCOUNT} terraform apply -auto-approve;
 
 infra-destroy:
-	cd infra && terraform destroy;
+	cd infra && awsudo -u ${ACCOUNT} terraform destroy;
